@@ -1,0 +1,11 @@
+<template>
+    <td class="slds-truncate" title="Name">
+        <a onclick={handleRedirectToLeadPage}>{lead.Name}</a>
+    </td>
+    <td class="slds-truncate" title="Title">
+        <lightning-input value = {lead.Title} onchange = {titleChangeHandler} title = 'Title'></lightning-input>
+    </td>
+    <td class="slds-truncate" title="Phone">
+        <lightning-input value = {lead.Phone} onchange = {phoneChangeHandler} title = 'Phone'></lightning-input>
+    </td>
+</template>

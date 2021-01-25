@@ -1,0 +1,23 @@
+<template>
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
+        <caption class = 'slds-text-heading_large slds-var-m-left_medium'>Leads</caption>  
+        <thead>
+            <tr class="slds-text-title_caps">
+                <th>
+                    <div class="slds-truncate" title="Name">Name</div>
+                </th>
+                <th>
+                    <div class="slds-truncate" title="Title">Title</div>
+                </th>
+                <th>
+                    <div class="slds-truncate" title="Phone">Phone</div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <template for:each = {leads} for:item = "lead">  
+                <c-leads-table-content titlevalue = {lead.Title} phonevalue = {lead.Phone} lead = {lead} key = {lead.Id} style = "display:table-row"></c-leads-table-content>
+            </template>
+        </tbody>
+    </table>
+</template>
